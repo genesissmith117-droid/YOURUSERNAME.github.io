@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ollie Publisher</title>
+<style>
+  :root{
+    --ink:#12233a; --ink-2:#4a5f7a; --bg:#fbfdff; --card:#ffffff;
+    --edge:#dbe6f2; --accent:#1f7ae0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8eef7; --ink-2:#9fb2c9; --bg:#0e1420; --card:#151d2c; --edge:#26334a; --accent:#5aa9ff; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    padding:40px 20px 80px}
+  .wrap{max-width:720px;margin:0 auto}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .mark{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(140deg,#7bd0ff,#1f7ae0);font-size:24px}
+  h1{font-size:1.7rem;margin:0;letter-spacing:-.02em}
+  .tag{color:var(--ink-2);margin:2px 0 26px;font-size:.98rem}
+  .card{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:20px 22px;margin:16px 0}
+  h2{font-size:1.05rem;margin:0 0 10px;letter-spacing:-.01em}
+  p{margin:.6em 0;color:var(--ink-2)}
+  p strong,li strong{color:var(--ink)}
+  ul{margin:.5em 0;padding-left:1.2em;color:var(--ink-2)}
+  li{margin:.35em 0}
+  a{color:var(--accent)}
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--edge);
+    color:var(--ink-2);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">🐙</div>
+    <div>
+      <h1>Ollie Publisher</h1>
+    </div>
+  </header>
+  <p class="tag">A small personal tool that uploads original children's videos to its owner's own YouTube channel.</p>
+
+  <div class="card">
+    <h2>What this is</h2>
+    <p>Ollie Publisher is a personal, single-user automation. It takes short animated videos that its owner
+      created — an original character named <strong>Ollie the Baby Octopus</strong>, made for toddlers — and
+      uploads them to that same owner's own YouTube channel on a schedule.</p>
+    <p>It is not a product, a service, or an app that other people sign into. There is exactly one user:
+      the person who owns both the software and the channel it posts to.</p>
+  </div>
+
+  <div class="card">
+    <h2>What it does</h2>
+    <ul>
+      <li>Renders short educational videos locally (counting, colors, shapes, feelings)</li>
+      <li>Runs automated quality and safety checks on each one before anything is uploaded</li>
+      <li>Marks every upload as <strong>Made for Kids</strong>, as required by COPPA</li>
+      <li>Uploads only videos its owner has explicitly approved</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Use of the YouTube API</h2>
+    <p>This tool uses the YouTube Data API to upload videos to its owner's channel, and reads back each
+      video's status to confirm it was published correctly and flagged as Made for Kids.</p>
+    <p>It accesses only the account that authorized it. It does not read, collect, or process data belonging
+      to any other person.</p>
+    <p>Use of the YouTube API is subject to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>This tool collects no personal data from anyone. See the
+      <a href="privacy.html">Privacy Policy</a> for the full statement.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Questions about this application: <strong>genesissmith117@gmail.com</strong></p>
+  </div>
+
+  <footer>
+    Ollie Publisher &middot; personal project &middot;
+    <a href="privacy.html">Privacy Policy</a>
+    <p style="margin-top:10px;font-size:.88rem">Ollie Publisher is an independent personal tool. It is not
+      affiliated with, sponsored by, or endorsed by Google LLC or YouTube.</p>
+  </footer>
+</div>
+</body>
+</html>
